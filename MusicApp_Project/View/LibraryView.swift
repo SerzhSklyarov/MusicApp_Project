@@ -9,7 +9,24 @@ import SwiftUI
 
 struct LibraryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView{
+                
+            VStack {
+                HStack{
+                    Text("Ищете свою музыку?")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                }
+                .padding(1)
+                Text("Здесь появится купленная Вами в iTunes Store музыка.")
+                    .foregroundColor(Color.gray)
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+                    .frame(width: 280)
+            }
+            .navigationTitle("Медиатека")
+        }
     }
 }
 
