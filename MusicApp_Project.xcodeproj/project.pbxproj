@@ -51,6 +51,7 @@
 		B150CC5D2729E4A800F0A4FA /* MusicApp_Project */ = {
 			isa = PBXGroup;
 			children = (
+				B150CC6C2729E9FC00F0A4FA /* View */,
 				B150CC5E2729E4A800F0A4FA /* MusicApp_ProjectApp.swift */,
 				B150CC602729E4A800F0A4FA /* ContentView.swift */,
 				B150CC622729E4A900F0A4FA /* Assets.xcassets */,
