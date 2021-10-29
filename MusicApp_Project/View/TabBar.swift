@@ -8,9 +8,41 @@
 import SwiftUI
 
 struct TabBar: View {
+    @State var current = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        
+        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
+            
+            TabView(selection: $current){
+                
+                LibraryView()
+                    .tag(0)
+                    .tabItem {
+                        
+                        Image(systemName: "square.stack.fill")
+                        Text("Медиатека")
+                    }
+                
+                Text("Радио")
+                    .tag(1)
+                    .tabItem {
+                        
+                        Image(systemName: "dot.radiowaves.left.and.right")
+                        Text("Радио")
+                    }
+                
+                Text("")
+                    .tag(2)
+                    .tabItem {
+                        
+                        Image(systemName: "magnifyingglass")
+                        Text("Поиск")}
+            }
+            .accentColor(.red)
+            MiniPlayer()
+            })
+        }
 }
 
 struct TabBar_Previews: PreviewProvider {
